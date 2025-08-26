@@ -1,0 +1,391 @@
+:root {
+  --green: #56612a;
+  --green-dark: #28300c;
+  --grey: #f7f8f6;
+  --grey-light: #f4f4f4;
+  --grey-border: #d0d6d5;
+  --text: #222;
+  --text-dark: #1b1e23;
+  --text-light: #5a5e60;
+  --white: #fff;
+  --radius: 12px;
+  --shadow: 0 4px 24px 0 rgba(34, 34, 34, 0.06);
+  font-size: 16px;
+}
+
+html,
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--grey);
+  color: var(--text);
+  min-height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+  box-sizing: border-box;
+}
+
+header {
+  background: var(--white);
+  box-shadow: 0 1px 0 #ececec;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.42rem;
+  text-decoration: none;
+  color: var(--green);
+  letter-spacing: -1px;
+  display: flex;
+  align-items: baseline;
+}
+
+.logo-eco { font-weight: 700; }
+.logo-living { font-weight: 400; }
+.logo-solutions {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 2px;
+  color: var(--green-dark);
+  letter-spacing: 0.5px;
+}
+
+nav {
+  display: flex;
+  gap: 2.1rem;
+}
+
+nav a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.14s;
+  padding: 3px 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--green);
+  border-bottom: 2px solid var(--green);
+}
+
+.nav-auth {
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+}
+
+.login-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-btn,
+.btn.btn-primary {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 22px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.17s;
+  box-shadow: 0 2px 8px 0 rgba(86,97,42,0.06);
+}
+
+.signup-btn:hover,
+.btn.btn-primary:hover {
+  background: var(--green-dark);
+}
+
+.btn.btn-outline {
+  background: #fff;
+  border: 1.5px solid var(--green);
+  color: var(--green);
+  border-radius: 5px;
+  padding: 8px 22px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: background 0.17s, color 0.17s;
+}
+
+.btn.btn-outline:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+main {
+  min-height: 70vh;
+}
+
+.hero-section {
+  background: var(--white);
+  padding: 48px 0 32px 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.hero-text {
+  flex: 1 1 340px;
+  max-width: 450px;
+  
+}
+
+.hero-text h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.hero-text p {
+  font-size: 1.18rem;
+  margin-bottom: 18px;
+  color: var(--text-light);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: normal;
+}
+
+.hero-image {
+  flex: 1 1 320px;
+  max-width: 420px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hero-image img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+
+
+.cta-section {
+  background: var(--grey-light);
+  padding: 48px 0;
+  text-align: center;
+}
+
+
+
+.cta-box h2 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-bottom: 17px;
+  color: var(--text-dark);
+}
+
+
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  margin-bottom: 0;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+  font-size: 0.98rem;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1.5px solid var(--grey-border);
+  border-radius: 5px;
+  padding: 8px 10px;
+  font-size: 1rem;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background: #fff;
+  margin-bottom: 0;
+  resize: none;
+}
+
+.form-group textarea {
+  min-height: 60px;
+  max-height: 160px;
+}
+
+.signup-section {
+  background: var(--white);
+  padding: 64px 0;
+}
+
+.signup-container {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.signup-form {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 38px 28px;
+  max-width: 380px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.signup-form h1 {
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-bottom: 0;
+}
+
+.signup-form p {
+  margin: 0 0 12px 0;
+  color: var(--text-light);
+}
+
+.signup-form .form-group {
+  margin-bottom: 0;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 5px;
+  border: 1.5px solid var(--grey-border);
+  font-size: 1rem;
+  background: #fff;
+  margin-bottom: 0;
+}
+
+.signup-form small {
+  font-size: 0.83rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+.signup-form .btn {
+  margin-top: 12px;
+}
+
+.signup-form .form-footer {
+  margin-top: 13px;
+  font-size: 0.97rem;
+  color: var(--text-light);
+}
+
+.signup-form .form-footer a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-image {
+  flex: 1 1 500px;
+  max-width: 600px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.signup-image img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+
+
+footer {
+  background: var(--green);
+  color: #fff;
+  margin-top: 50px;
+  padding: 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: -1px;
+}
+.footer-logo .logo-eco { color: #fff; font-weight:700;}
+.footer-logo .logo-living { color: #fff; font-weight:400;}
+.footer-logo .logo-solutions { color: #fff; font-weight:600; font-size: 0.82rem; margin-left: 2px;}
+
+.footer-right {
+  font-size: 0.97rem;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .hero-content,
+  .about-bg-container,
+  .contact-container,
+  .signup-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
